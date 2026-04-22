@@ -3,10 +3,53 @@
 <html>
 
 <head>
+
+  <style>
+    .star {
+      position: relative;
+      display: block;
+      width: 0;
+      height: 0;
+      margin: 100px auto;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid yellow;
+      border-left: 100px solid transparent;
+      transform: rotate(35deg);
+    }
+
+    .star::before {
+      content: '';
+      position: absolute;
+      top: -45px;
+      left: -65px;
+      border-right: 30px solid transparent;
+      border-bottom: 80px solid yellow;
+      border-left: 30px solid transparent;
+      transform: rotate(-35deg);
+    }
+
+    .star::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: -105px;
+      border-right: 100px solid transparent;
+      border-bottom: 70px solid yellow;
+      border-left: 100px solid transparent;
+      transform: rotate(-70deg);
+    }
+  </style>
+
+
+
+	
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
+
+	<div class="star"></div>
 	<!-- the entire body must be written by student -->
     <script type="text/javascript" src="./script.js">
 </script>
